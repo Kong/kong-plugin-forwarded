@@ -11,11 +11,12 @@ return {
           { host  = typedefs.host },
           { port  = typedefs.port },
           { proto = { type = "string", one_of = { "http", "https" } } },
+          { prefix = typedefs.path },
         },
       },
     },
   },
   entity_checks = {
-    { at_least_one_of = { "config.host", "config.port", "config.proto" } },
+    { at_least_one_of = { "config.host", "config.port", "config.proto", "config.prefix" } },
   },
 }
