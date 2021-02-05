@@ -11,6 +11,7 @@ function ForwardedHandler:access(conf)
   if conf.host  then var.upstream_x_forwarded_host  = conf.host  end
   if conf.port  then var.upstream_x_forwarded_port  = conf.port  end
   if conf.proto then var.upstream_x_forwarded_proto = conf.proto end
+  if conf.prefix then var.upstream_x_forwarded_prefix = conf.prefix end
 end
 
 
